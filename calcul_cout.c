@@ -9,8 +9,8 @@ void calcul_cout(unsigned int* cout_final, unsigned char** energie, unsigned int
     unsigned int** cout;
     cout_final=calloc(nc,sizeof(*cout_final));
 
-    cout = alloue_image_int(nl,nc);
-    pere = alloue_image_int(nl,nc);
+  /*  cout = alloue_image_int(nl,nc);
+    pere = alloue_image_int(nl,nc);*/
     int i,j,k;
 
 

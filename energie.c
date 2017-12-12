@@ -7,7 +7,7 @@ Création de la fonction calculant l'énergie / gradient de l'image d'entrée, �
 
 unsigned char** gradienty(unsigned char** energ, unsigned char** im, int nl, int nc){
     if (energ==NULL){
-    energ=alloue_image_char(nl,nc);
+  /*  energ=alloue_image_char(nl,nc);*/
     }
     int  i,j;
     for ( i=0;i<nl;i++){
