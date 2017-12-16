@@ -13,8 +13,12 @@ unsigned char** alloue_image_char(int nl,int nc){
     tab =(unsigned char **)calloc(nl,sizeof(*tab)); //création du nombre de ligne
     if(tab == NULL) return NULL;
     else{
-        *tab = (unsigned char *)calloc(nc*nl,sizeof(**tab)); // créations des colonnes
+        for(int i=0;i<nl;i++){
+        tab[i] = (unsigned char *)calloc(nc,sizeof(**tab)); // créations des colonnes
+
+        }
     }
+    printf(*tab);
     return tab;
 }
 
@@ -24,7 +28,9 @@ unsigned int** alloue_image_int(int nl, int nc){
     tab =(unsigned int **)calloc(nl,sizeof(*tab)); //création du nombre de ligne
     if(tab == NULL) return NULL;
     else{
-        *tab = (unsigned int *)calloc(nc*nl,sizeof(**tab)); // créations des colonnes
+        for(int i=0;i<nl;i++){
+        tab[i] = (unsigned int *)calloc(nc,sizeof(**tab)); // créations des colonnes
+    }
     }
     return tab;
 }
