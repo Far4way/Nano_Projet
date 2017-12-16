@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
-/*#include<SDL_phelma.h>
+#include <SDL_phelma.h>
 #include "projet.h"
-*/
+#include <SDL/SDL.h>
+#include <SDL/SDL_image.h>
+#include <SDL_tab.h>
 
-main(int ac, char**av) { int nl, nc;
+void main(int ac, char**av) { int nl, nc;
   unsigned char** im, ** im3, **im4, **energ;
 
   puts("Test du calcul de l'energie de l'image");
@@ -34,15 +35,14 @@ main(int ac, char**av) { int nl, nc;
   puts("--> OK");
 
   printf("Liberation image entree "); fflush(stdout);
-  libere_image((unsigned char**)im);
+  libere_image((unsigned char**)im,nl);
   puts("--> OK");
   printf("Liberation image energie "); fflush(stdout);
-  if (energ) libere_image((unsigned char**)energ);
+  if (energ) libere_image((unsigned char**)energ,nl);
   puts("--> OK");
 
   printf("Liberation image 2ieme energie "); fflush(stdout);
-  if (im3) libere_image((unsigned char**)im3);
+  if (im3) libere_image((unsigned char**)im3,nl);
   puts("--> OK");
 
-  return 1;
 }

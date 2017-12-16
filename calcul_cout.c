@@ -1,5 +1,8 @@
-#include<stdlib.h>
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include<SDL_phelma.h>
+#include "projet.h"
 /*
 Création de la fonction créant le tableau 1D cout_final et le tableau 2D pere.
 
@@ -7,10 +10,10 @@ Création de la fonction créant le tableau 1D cout_final et le tableau 2D pere.
 void calcul_cout(unsigned int* cout_final, unsigned char** energie, unsigned int** pere,int nl,int nc){
 
     unsigned int** cout;
-    cout_final=calloc(nc,sizeof(*cout_final));
+    /*cout_final=calloc(nc,sizeof(*cout_final));*/
 
-  /*  cout = alloue_image_int(nl,nc);
-    pere = alloue_image_int(nl,nc);*/
+    cout = alloue_image_int(nl,nc);
+    /*pere = alloue_image_int(nl,nc);*/
     int i,j,k;
 
 
@@ -20,6 +23,7 @@ void calcul_cout(unsigned int* cout_final, unsigned char** energie, unsigned int
             for(j=0;j<nc;j++){
                 cout[i][j]=0;
                 pere[i][j]=-1;
+
             }
         }
         else{
@@ -41,6 +45,9 @@ void calcul_cout(unsigned int* cout_final, unsigned char** energie, unsigned int
                     cout[i][j]=cout[i-1][j+k]+energie[i-1][j+k];
                     pere[i][j]=j+k;               }
             }
+            if(i==nl-1){
+                cout_final[j]=cout[nl-1][j];
+                }
         }
 
 

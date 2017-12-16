@@ -14,6 +14,19 @@ TESTS_SRC=allocation_test.c energie_test.c
 TESTS_EXEC=$(TESTS_SRC:.c=.o)
 TESTS_EXEC=$(TESTS_SRC:.c=.exe)
 
+prog : prog.o $(OBJS) 
+	gcc -o $@ $^ $(LDFLAGS)
+
+demo_seam : demo_seam.o seam_carving_graphique.o $(OBJS)
+	gcc -o $@ $^ $(LDFLAGS)
+
+
+%.o: %.c
+	gcc -c $< $(CFLAGS)
+	
+clean :
+	rm -f *.o prog demo_seam $(TESTS_EXEC) *~
+
 allocation_test.exe:  allocation.o allocation_test.o
 	gcc -o $@ $^ $(LDFLAGS) 
 

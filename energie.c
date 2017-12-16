@@ -1,5 +1,8 @@
-#include<stdlib.h>
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include<SDL_phelma.h>
+#include "projet.h"
 /*
 Création de la fonction calculant l'énergie / gradient de l'image d'entrée, à traiter.
 

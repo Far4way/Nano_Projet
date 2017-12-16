@@ -8,5 +8,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
+#include <SDL_phelma.h>
+#include "projet.h"
 
-void trouve_chemin(unsigned int* chemin, unsigned int** pere, unsigned int* )
+void trouve_chemin(unsigned int* chemin, unsigned int** pere, unsigned int* cout_final, int nl, int nc){
+
+}

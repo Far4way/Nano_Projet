@@ -7,6 +7,10 @@
 //
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
+#include<SDL_phelma.h>
+#include "projet.h"
+
 /* Fonctions d'allocation et de libération */
 unsigned char** alloue_image_char(int nl,int nc){
     unsigned char** tab;

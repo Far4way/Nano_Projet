@@ -8,6 +8,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
+#include<SDL_phelma.h>
+#include "projet.h"
 
 void supprime_colonne(unsigned char** im, unsigned int* chemin, int nl, int nc){
     int i,j;
