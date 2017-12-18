@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <SDL_phelma.h>
 #include "projet.h"
 
 unsigned char** seam_carving(unsigned char** im, int nbcol, int nl, int nc){
@@ -25,7 +24,6 @@ unsigned char** seam_carving(unsigned char** im, int nbcol, int nl, int nc){
     trouve_chemin(chemin, pere, cout_final, nl, nc);
 
     supprime_colonne( im, chemin, nl, nc);
-
     }
 
 }

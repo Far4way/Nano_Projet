@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <SDL_phelma.h>
 #include "projet.h"
 /*
 	Zoom horizontal de centre nl/2,jc. L'image reste de la meme taille

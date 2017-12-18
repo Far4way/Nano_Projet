@@ -3,8 +3,8 @@
 #$^ 	La liste des dépendances
 #$* 	Le nom du fichier sans suffixe
 
-DIRSDL=/usr
-CFLAGS=-g -I$(DIRSDL)/include  -I$(DIRSDL)/include/SDL -I$(DIRSDL)/local/include/SDL -I$(DIRSDL)/local/include/SDL #-DDEBUG
+DIRSDL=/users/prog1a/C/librairie/2011
+CFLAGS=-g -I$(DIRSDL)/include  -I$(DIRSDL)/include/SDL #-DDEBUG
 LDFLAGS=-L$(DIRSDL)/lib -lSDLmain -lSDL -lSDL_ttf -lSDL_image  -lSDL_sound -lSDL_phelma -lSDL_draw -lm
 
 SRC=allocation.c calcul_cout.c energie.c seam_carving.c supprime_colonne.c trace_chemin.c trouve_chemin.c zoomx.c  
